@@ -9,6 +9,7 @@ function useSectionIndicator(container: React.RefObject<HTMLDivElement>) {
     const context = gsap.context(() => {
       const sectionCount = document.getElementById("slide-count");
       const links: HTMLAnchorElement[] = gsap.utils.toArray(".nav-links a");
+      const container = document.querySelector(".wrapper");
       // creating scroll-trigger for each section to check intersection on scroll
       links.forEach((a, idx) => {
         const href = a.getAttribute("href");
@@ -19,7 +20,7 @@ function useSectionIndicator(container: React.RefObject<HTMLDivElement>) {
           trigger: element,
           start: "top center",
           end: "bottom center",
-          scroller: container.current,
+          scroller: container,
           onToggle: (s) => s.isActive && setActive(a, idx),
         });
       });
