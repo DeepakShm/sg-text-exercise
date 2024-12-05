@@ -2,8 +2,6 @@ export const NAV_LINKS = [
   { href: "#home", label: "ABOUT" },
   { href: "#community", label: "COMMUNITY" },
   { href: "#menu", label: "OUR MENU" },
-  { href: "#location", label: "LOCATION" },
-  { href: "#recipes", label: "RECIPES" },
 ];
 
 const CTA_LINKS = [

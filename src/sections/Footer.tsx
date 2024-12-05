@@ -41,7 +41,7 @@ const SOCIAL_LINKS = [
 
 function Footer() {
   return (
-    <footer className="p-5 bg-primary pt-16 pb-11">
+    <footer className="p-5 bg-primary py-16">
       <div className="max-w-screen-xl mx-auto space-y-12">
         <div className="flex flex-row flex-wrap">
           <nav className="grid flex-1 grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2">
