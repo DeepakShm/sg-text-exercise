@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "DIN";
+  src: url("./assets/fonts/DIN-Condensed-Bold.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gill";
+  src: url("./assets/fonts/GillSans.ttc");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+
+    --primary: 0, 0%, 20%, 1;
+    --primary-foreground: 60 9.1% 97.8%;
+
+    --secondary: 19, 100%, 89%, 1;
+    --secondary-foreground: 24 9.8% 10%;
+
+    --muted: 0, 0%, 46%, 1;
+    --muted-foreground: 25 5.3% 44.7%;
+
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    scroll-behavior: smooth !important;
+    @apply border-border;
+  }
+  body {
+    margin: 0;
+    scrollbar-width: thin;
+    @apply bg-background text-primary font-din;
+  }
+}
+
+.stack > * {
+  grid-area: 1/1;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  padding: 0;
+  margin: 0;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.wrapper > * {
+  scroll-snap-align: start;
+}
+.heading {
+  z-index: 1;
+}
+.heading::after {
+  --length: 2rem;
+  content: "";
+  width: calc(100% + var(--length));
+  left: calc(var(--length) / -2);
+  @apply absolute bottom-6 h-2 bg-secondary -z-[1];
+}
+
+.slide-count {
+  transition: top 0.2s ease-in-out;
+}
+
+.nav-links li a {
+  display: block;
+  outline: none;
+  width: 15px;
+  border: 1.5px solid;
+  transition: width 0.3s ease-in-out;
+  background-color: hsl(var(--primary));
+}
+.nav-links li a.active {
+  width: 30px;
+}
+
+@keyframes indicator {
+  0% {
+    width: 15px;
+  }
+  100% {
+    width: 30px;
+  }
+}
