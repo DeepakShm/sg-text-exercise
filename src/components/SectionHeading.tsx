@@ -11,7 +11,7 @@ type SectionHeadingType = {
 function SectionHeading({ heading, cta, className }: SectionHeadingType) {
   return (
     <div>
-      <div className="inline-block space-y-3">
+      <div className="inline-block space-y-3 uppercase">
         <h2 className={`relative w-fit heading text-[62px] text-primary uppercase leading-[0.9] ` + className || ""}>
           {heading}
         </h2>

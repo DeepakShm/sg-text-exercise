@@ -12,8 +12,8 @@ const CTA_LINKS = [
 function Header() {
   return (
     <header className="fixed top-0 w-full px-9 py-5 z-50 backdrop-blur-[1px]">
-      <nav className="flex flex-row gap-12 items-center">
-        <a href="#" className="text-3xl">
+      <nav className="flex flex-row gap-12 items-center uppercase">
+        <a href="#home" className="text-3xl">
           LOGO
         </a>
         <ul className="md:flex flex-row gap-12 items-center hidden">
@@ -26,7 +26,7 @@ function Header() {
           ))}
         </ul>
 
-        <ul className="flex flex-row gap-12 items-center ml-auto">
+        <ul className="flex flex-row gap-12 items-center ml-auto uppercase">
           {CTA_LINKS.map((cl) => (
             <li key={cl.label}>
               <a href={cl.href}>{cl.label}</a>

@@ -26,7 +26,7 @@ function Community() {
 
   return (
     <section id="community" className="relative min-h-screen max-w-screen-xl mx-auto py-20 px-5">
-      <div className="lg:max-w-60 static lg:absolute z-[1] left-1/4">
+      <div className="lg:max-w-60 static lg:absolute z-[1] left-1/4 uppercase">
         <SectionHeading heading="MEET OUR COMMUNITY" cta={{ href: "#", text: "Know More" }} />
         <p>LOREM IPSUM DOLOR SIT AMET ERNUT TEMPARTERO SERTU PER NABORE EN TORNA ENTALTO</p>
       </div>

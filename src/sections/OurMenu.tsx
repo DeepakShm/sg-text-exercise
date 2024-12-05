@@ -24,6 +24,7 @@ function OurMenu() {
           },
           y: "-100%",
         });
+        // reverse animation menu
         gsap.to(".rev-menu-card", {
           scrollTrigger: {
             trigger: ".our-menu",
@@ -39,6 +40,7 @@ function OurMenu() {
     // cleanup on unmount
     return () => context.revert();
   }, []);
+
   return (
     <section id="menu" className="bg-muted-foreground">
       <div className="our-menu min-h-screen max-w-screen-lg mx-auto py-20 px-5 grid stack relative ">
@@ -73,8 +75,3 @@ function OurMenu() {
 }
 
 export default OurMenu;
-
-// grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-//     grid-area: unset;
-// padding :0
-// min-h-screen

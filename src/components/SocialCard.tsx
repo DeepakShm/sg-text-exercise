@@ -27,7 +27,7 @@ function SocialCard({ rowReverse, card, testimoni }: SocialCardPropType) {
             <IgIcon />
           </a>
         </div>
-        <div className="card-body p-4 bg-white shadow-2xl flex flex-col flex-1">
+        <div className="card-body lg:p-8 p-4 bg-white shadow-2xl flex flex-col flex-1">
           <h5 className="text-xl">{card.title}</h5>
           <p className="font-gill text-xs mt-4">{card.body}</p>
           <div className="mt-auto">

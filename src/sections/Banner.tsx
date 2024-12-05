@@ -7,7 +7,7 @@ function Banner() {
       <div className="grid w-full h-screen stack">
         <img className="h-screen object-cover w-full" src={BannerImg} alt="banner" />
         <div className="grid place-content-center max-w-screen-md mx-auto text-white">
-          <div className="relative px-5">
+          <div className="relative px-5 uppercase">
             <span className="absolute -left-[40%] -top-[50%] hidden md:block text-primary">
               <LogoStamp />
             </span>
