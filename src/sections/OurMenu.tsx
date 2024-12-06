@@ -44,7 +44,7 @@ function OurMenu() {
   return (
     <section id="menu" className="bg-muted-foreground">
       <div className="our-menu min-h-screen max-w-screen-lg mx-auto py-20 px-5 grid stack relative ">
-        <div className="text-center z-[2]">
+        <div className="text-center z-[2] h-0">
           <SectionHeading heading="OUR Menu" className="max-w-60" cta={{ href: "#", text: "Know More" }} />
         </div>
         <div className="grid lg:grid-cols-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))] overflow-hidden menu-list pt-5">
@@ -53,13 +53,13 @@ function OurMenu() {
               <MenuItem title="starters" menu={STARTER_MENU} />
             </div>
           </div>
-          <div data-order="rev" className="rev-menu-card lg:min-h-screen ">
-            <div className="border-0 lg:border-r border-gray-300 ">
+          <div className="border-0 lg:border-r border-gray-300 ">
+            <div data-order="rev" className="rev-menu-card lg:min-h-screen ">
               <MenuItem title="main course" menu={MAIN_MENU} />
             </div>
           </div>
-          <div data-order="for" className="menu-card lg:min-h-screen ">
-            <div className="border-0 lg:border-r border-gray-300 ">
+          <div className="border-0 lg:border-r border-gray-300 ">
+            <div data-order="for" className="menu-card lg:min-h-screen ">
               <MenuItem title="sides" menu={SIDE_MENU} />
             </div>
           </div>
